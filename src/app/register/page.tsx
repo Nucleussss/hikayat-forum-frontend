@@ -27,8 +27,7 @@ export default function RegisterPage() {
         setLoading(true);
         setError(null);
 
-        try {
-            // 👉 Calls your forum-gateway (should match your auth-service contract)
+        try {            
             const res = await fetch('/api/auth/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
